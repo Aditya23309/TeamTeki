@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeamTeki Website</title>
+<link rel="icon" href="ic.png">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+ <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Work+Sans&family=Noto+Sans&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+
+
+
+ <link rel="stylesheet" href="style.css">
+ 
+<body>
+  <header>
+  <div class="nav-left">
+    <img src="logo.png" alt="Logo" />
+  </div>
+
+  <nav class="nav-center">
+    <a onclick="openPanel('menu1')">Platform</a>
+    <a onclick="openPanel('menu2')">Solution</a>
+    <a onclick="openPanel('menu3')">Services</a>
+    <a onclick="openPanel('menu4')">Customers</a>
+    <a onclick="openPanel('menu5')">Resources</a>
+    <a onclick="openPanel('menu6')">Company</a>
+  </nav>
+
+  <div class="nav-right">
+      <i class="fas fa-search search-icon"></i>
+      <button class="bounce-button">Login Now</button>
+    </div>
+  
+</header>
+
+<div class="floating-window" id="floatingPanel">
+  <div class="left-panel">
+    <p id="leftPara1"><strong>Default Left Para 1</strong></p><br>
+    <p id="leftPara2">Default Left Para 2</p><br>
+     <p id="leftPara3">Default Left Para 3</p><br>
+    <div class="submenu" id="submenu">
+      <!-- Submenu links -->
+    </div>
+  </div>
+  
+  <div class="right-panel">
+    <img id="rightImage" src="https://via.placeholder.com/100x40?text=Img" alt="Panel Image" class="right-image"/>
+    <p id="rightPara"><strong>Default Right Para</strong></p>
+    <ul id="detailsList">
+      <!-- List items -->
+    </ul>
+  </div>
+</div>
+
+<div class="containerr">
+ <section class="sectionn">
+    <div class="left-content">
+      <!--div class="small-heading">HOME ></!--div-->
+      <div class="big-headingg">AI revenue enablement. Built to win.</div>
+      <br>
+      <div class="paragraph">
+         The only all-in-one platform designed<br> to ramp reps faster ⚡
+      </div>
+      <br>
+      <button class="transition-button" onclick="buttonClicked()">Explore the Platform</button>
+
+      <div class="trusted">
+        <div class="trusted-title">Trusted by the best ✨</div>
+        <div class="logos">
+          <img src="https://www.mindtickle.com/wp-content/uploads/2025/03/cisco-logo.svg" alt="Microsoft">
+          <img src="https://www.mindtickle.com/wp-content/uploads/2025/03/Energizer_logo-logo.svg" alt="Logo TV">
+          <img src="https://www.mindtickle.com/wp-content/uploads/2025/04/amazon-business-logo.svg" alt="IBM">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="right-content">
+      <img src="bane.webp" alt="Business">
+    </div>
+  </section>
+  </div>
+  <div class="headline-section">
+    <h1>Join us at Elevate <b></b>25 in Chicago on September 24-25</h1>
+     <a href="#">👉 Learn More & Register</a>
+  </div>
+
+<!--section class="features-section">
+    <h1 class="ui-heading">
+      <i class="fas fa-fire"></i>
+      What We Offer
+    </h1>
+    <h1 class="section-title">Key Services of TeamTeki Automation Testing Cloud</h1>
+    <div class="features-grid">
+      <div class="feature">
+        <div class="icon" img src="icon3.jpg">🧪</div>
+        <h3 class="feature-title">Functional Testing</h3>
+        <p>Automate repetitive tasks to save time and reduce errors across your workflow.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🔐</div>
+        <h3 class="feature-title">Security Testing</h3>
+        <p>Your data is protected with enterprise-grade encryption and privacy features.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🚀</div>
+        <h3 class="feature-title">Performance Testing</h3>
+        <p>Gain insights with real-time dashboards and reporting tools.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">📝</div>
+        <h3 class="feature-title">Low Code</h3>
+        <p>Connect seamlessly with your existing tools and platforms with minimal setup.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🤖</div>
+        <h3 class="feature-title">Automation Testing</h3>
+        <p>Gain insights with real-time dashboards and reporting tools.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🔁</div>
+        <h3 class="feature-title">Regression Testing</h3>
+        <p>Connect seamlessly with your existing tools and platforms with minimal setup.</p>
+      </div>
+    </div>
+    <div-- class="">
+  <button class="bouncy-button">Get Started</button>
+</div-->
+
+<section class="section">
+    <div class="section-content">
+      <div class="small-heading">🔥 What we offer</div>
+      <div class="big-heading">The AI revenue enablement platform fueling <br>growth</div>
+      <br>
+      <p class="description">
+        Training, content, and insights revenue teams need to engage the modern buyer and close more deals.
+      </p>
+    </div>
+
+    <div class="icon-row">
+      <div class="icon-box">
+        <img src="https://www.mindtickle.com/wp-content/uploads/2024/12/icon3.svg" alt="Icon 1" />
+        <p><strong>Improve rep performance</strong> at scale with personalized training</p>
+      </div>
+      <div class="icon-box">
+        <img src="https://www.mindtickle.com/wp-content/uploads/2024/12/icon5.svg" alt="Icon 2" />
+        <p><strong>Accelerate deal cycles</strong> with tailored buying experiences</p>
+      </div>
+      <div class="icon-box">
+        <img src="https://www.mindtickle.com/wp-content/uploads/2024/12/icon1.svg" alt="Icon 3" />
+        <p><strong>Level up</strong> your teams with AI coaching</p>
+      </div>
+      <div class="icon-box">
+        <img src="https://www.mindtickle.com/wp-content/uploads/2024/12/icon4.svg" alt="Icon 4" />
+        <p>Stay agile with <strong>AI-powered</strong> field and performance insights</p>
+      </div>
+    </div>
+
+    <div class="center-button">
+      <button>Get a Demo</button>
+    </div>
+  </section>
+ 
+<!--section class="countup-section">
+  <div class="countup-container">
+    <div class="countup-box">
+      <h3 class="count-title">Clients Rate TeamTeki 5/5</h3>
+      <span class="counter" data-target="95" data-percent="true">0</span>
+    </div>
+    <div class="countup-box">
+      <h3 class="count-title">Years of Excellence</h3>
+      <span class="counter" data-target="3">0</span>
+    </div>
+    <div class="countup-box">
+      <h3 class="count-title">Faster onboarding</h3>
+      <span class="counter" data-target="50" data-percent="true">0</span>
+    </div>
+  </div>
+</!--section>
+<?section-->
+
+ <!--section class="stats-section">
+    <div class="gradient-border">
+      <div class="stat-box">
+        <div class="stat-item">
+          <div class="stat-content">
+            <span class="stat-number" data-value="85">31%</span>
+            <span class="stat-title"><strong>increase in deal sizes</strong></span>
+          </div>
+        </div>
+        <div class="separator"></div>
+        <div class="stat-item">
+          <div class="stat-content">
+            <span class="stat-number" data-value="70">40%</span>
+            <span class="stat-title"><strong>increase in revenue per</strong></span>
+          </div>
+        </div>
+        <div class="separator"></div>
+        <div class="stat-item">
+          <div class="stat-content">
+            <span class="stat-number" data-value="95">50%</span>
+            <span class="stat-title"><strong>faster onboarding</strong></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </!--section-->
+
+
+<div class="containeer">
+
+  <!-- Box Template - Repeat 8 Times -->
+  <div class="box">
+    <div class="image-layer" style="background-image: url('https://dynamicmedia.accenture.com/is/image/accenture/Resilience-Redefined-Glance-Skim-600X848%3Arad-card-full?ts=1749623423375&fit=constrain&dpr=off');"></div>
+    <div class="content">
+      <div class="small-headingg">Research Report</div>
+      <div class="bi-headingg">Resilience redefined: From readiness to reinvention</div>
+      <div class="hover-content">
+        <p>This is a hover description for card one. It appears under the heading.</p>
+        <a href="#" class="read-more">Read More</a>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Duplicate Boxes -->
+  <div class="box">
+    <div class="image-layer" style="background-image: url('https://dynamicmedia.accenture.com/is/image/accenture/GS-The-Front-Runners-600x848%3Arad-card-full?ts=1741953762442&fit=constrain&dpr=off');"></div>
+    <div class="content">
+      <div class="small-headingg">Research Report</div>
+      <div class="bi-headingg">Resilience redefined: From readiness to reinvention</div>
+      <div class="hover-content">
+        <p>This is a hover description for card two.</p>
+         <a href="#" class="read-more">Read More</a>
+      </div>
+     
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="image-layer" style="background-image: url('https://dynamicmedia.accenture.com/is/image/accenture/Glance-Skim-woman-600x848%3Arad-card-full?ts=1745463172038&fit=constrain&dpr=off');"></div>
+    <div class="content">
+      <div class="small-headingg">Research Report</div>
+      <div class="bi-headingg">Resilience redefined: From readiness to reinvention</div>
+      <div class="hover-content">
+        <p>This is a hover description for card three.</p>
+        <br>
+         <a href="#" class="read-more">Read More</a>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="image-layer" style="background-image: url('https://dynamicmedia.accenture.com/is/image/accenture/Humans-AI-Robots-Glance-image-1%3Arad-card-full?ts=1743436045148&fit=constrain&qlt=20&dpr=off');"></div>
+    <div class="content">
+      <div class="small-headingg">Research Report</div>
+      <div class="bi-headingg">Resilience redefined: From readiness to reinvention</div>
+      <div class="hover-content">
+        <p>This is a hover description for card four.</p>
+         <a href="#" class="read-more">Read More</a>
+      </div>
+     
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="image-layer" style="background-image: url('https://dynamicmedia.accenture.com/is/image/accenture/Accenture-Consumer-Pulse25-Glance-Image-600x848%3Arad-card-full?ts=1748156094081&fit=constrain&dpr=off');"></div>
+    <div class="content">
+      <div class="small-headingg">Research Report</div>
+      <div class="bi-headingg">Resilience redefined: From readiness to reinvention</div>
+      <div class="hover-content">
+        <p>This is a hover description for card five.</p>
+         <a href="#" class="read-more">Read More</a>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="image-layer" style="background-image: url('https://dynamicmedia.accenture.com/is/image/accenture/01_Unlocking_Alpha_GLANCE_600x848%3Arad-card-full?ts=1741980781432&fit=constrain&dpr=off');"></div>
+    <div class="content">
+      <div class="small-headingg">Research Report</div>
+      <div class="bi-headingg">Resilience redefined: From readiness to reinvention</div>
+      <div class="hover-content">
+        <p>This is a hover description for card six.</p>
+         <a href="#" class="read-more">Read More</a>
+        
+      </div>
+     
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="image-layer" style="background-image: url('https://dynamicmedia.accenture.com/is/image/accenture/Al-Etihad-Glance-Card%3Arad-card-full?ts=1740599077513&fit=constrain&qlt=50&dpr=off');"></div>
+    <div class="content">
+      <div class="small-headingg">Research Report</div>
+      <div class="bi-headingg">Resilience redefined: From readiness to reinvention</div>
+      <div class="hover-content">
+        <p>This is a hover description for card seven.</p>
+         <a href="#" class="read-more">Read More</a>
+      </div>
+     
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="image-layer" style="background-image: url('https://dynamicmedia.accenture.com/is/image/accenture/NCSC-Glance-Skim-600x424%3Arad-card-half?ts=1746550318493&fit=constrain&dpr=off');"></div>
+    <div class="content">
+      <div class="small-headingg">Research Report</div>
+      <div class="bi-headingg">Resilience redefined: From readiness to reinvention</div>
+      <div class="hover-content">
+        <p>This is a hover description for card eight.</p>
+         <a href="#" class="read-more">Read More</a>
+      </div>
+     
+    </div>
+  </div>
+
+</div>
+
+
+  
+
+<!--div class="tab-container">
+   <h6 class="ui-heading">
+    🤓 who we help
+    </h6>
+    <br>
+    <div class="section-title" style="text-align: center;">Supporting Testing teams like yours</div><br><br>
+  <div class="tabs">
+    <button class="tab active" data-tab="tab1">Automation Testing</button>
+    <button class="tab" data-tab="tab2">Security</button>
+    <button class="tab" data-tab="tab3">Web API Testing</button>
+  </div>
+
+  <div id="tab1" class="tab-content active">
+    <div class="content-left">
+      <h2>Prove the impact enablement has on business outcomes</h2>
+      <br>
+      <ul>
+        <li>Reduced Regression Test Cycle by 80%</li>
+        <li>50+ Domain Specific Automation Frameworks</li>
+        <li>Multi-Platform Testing</li>
+      </ul>
+      <br><br>
+      <button>Solutions for Automation</button>
+      
+    </div>
+    <div class="content-right">
+      <img src="https://www.mindtickle.com/wp-content/uploads/2025/02/Diptych-1.png" alt="Section One Image">
+    </div>
+  </div>
+
+  <div id="tab3" class="tab-content">
+    <div class="content-left">
+      <h2>End-to-End Web API Testing Services Trusted by Global Enterprises</h2>
+      <br>
+      <ul>
+        <li>AI-driven Smart Automation</li>
+        <li>Deployment of Up-to-date Test Accelerators.</li>
+        <li>4X Faster Time to Market</li>
+      </ul>
+      <br><br>
+      <button>Solutions for Web API</button>
+      
+    </div>
+    <div class="content-right">
+      <img src="https://www.mindtickle.com/wp-content/uploads/2025/02/Diptych-1.png" alt="Section Three Image">
+      
+    </div>
+  </div>
+
+  <div id="tab2" class="tab-content">
+    <div class="content-left">
+      <h2>Security & Penetration Testing Services for Business-Critical Software Applications</h2>
+           <br>
+      <ul>
+        <li>50+ Certified Security Testing Professionals</li>
+        <li>Multi-Domain Security Testing Projects</li>
+        <li>40% Reduced QA Costs</li>
+      </ul>
+      <br><br>
+      <button>Solutions for Security</button>
+    </div>
+    <div class="content-right">
+      <img src="https://www.mindtickle.com/wp-content/uploads/2025/03/SalesEnablement.png" alt="Section Two Image">
+    </div>
+  </div>
+</!--div>
+
+
+<section-- class="full-section1">
+    </section-->
+
+
+<div class="slider-container">
+    <div class="slider-track">
+      <div class="slide">
+        <div class="slide-image">
+          <img src="https://dynamicmedia.accenture.com/is/image/accenture/NFL-hero-image-1920x1080%3Arad-3x2?ts=1750436793637&fit=constrain&qlt=25&dpr=off" alt="Slide Image">
+        </div>
+        <div class="slide-content">
+          <h3>The NFL reinvents the future of football</h3>
+          <p>How the National Football League is using data to drive better decision-making and grow the game internationally.</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-image">
+          <img src="https://dynamicmedia.accenture.com/is/image/accenture/Tracr-Hero-Image-3840x2160%3Arad-3x2?ts=1750436793711&fit=constrain&qlt=30&dpr=off" alt="Slide Image">
+        </div>
+        <div class="slide-content">
+          <h3>Tracr pioneers trust in diamond traceability</h3>
+          <p>The industry-first blockchain platform creates a traceable, tamper-proof record of a diamond's provenance from the source.</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-image">
+          <img src="https://dynamicmedia.accenture.com/is/image/accenture/Accenture-TechVision2025-Client-Storie-AI-Refinery-Featured-1920x1080%3Arad-3x2?ts=1750436793567&fit=constrain&qlt=20&dpr=off" alt="Slide Image">
+        </div>
+        <div class="slide-content">
+          <h3>AI Refinery: Smarter, faster marketing</h3>
+          <p>Accenture’s marketers can focus on more creative, strategic work with AI agents, thanks to a strong digital core that paved the way for agentic architecture.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    
+<br>
+    <h1 class="ui-heading">
+      
+      You 🤝 TeamTeki
+    </h1><br>
+    <h1 class="section-title" style="text-align: center;">The leading AI-powered revenue enablement platform</h1><br>
+ <div class="container">
+    <div class="links-column" id="linkList">
+      <a href="#" data-img="https://www.mindtickle.com/wp-content/uploads/2025/03/div.rounded-md-1.png">AI Copilot</a>
+      <a href="#" data-img="https://www.mindtickle.com/wp-content/uploads/2025/03/div.rounded-md-2.png">AI Role-Plays</a>
+      <a href="#" data-img="https://www.mindtickle.com/wp-content/uploads/2025/03/SalesTraining.png">Sales Training</a>
+      <a href="#" data-img="https://www.mindtickle.com/wp-content/uploads/2025/03/coaching-banner.png">Coaching</a>
+      <a href="#" data-img="https://www.mindtickle.com/wp-content/uploads/2025/03/SalesContentManagement.png">Sales Content Management</a>
+      <a href="#" data-img="https://www.mindtickle.com/wp-content/uploads/2025/03/div.rounded-md.png">Digital Sales Rooms</a>
+      <a href="#" data-img="https://www.mindtickle.com/wp-content/uploads/2025/03/ConversationIntelligence.png">Conversation Intelligence</a>
+    </div>
+    <div class="image-column" id="imageContainer">
+      <img src="https://www.mindtickle.com/wp-content/uploads/2025/03/Analyticss.png" alt="Preview" id="previewImage">
+    </div>
+  </div>
+   <div class="headline-sectionn">
+    <h1>Turn data into winning sales strategies</h1>
+     <a href="#">👉 Explore Analytics & Dashboards</a>
+  </div>
+
+
+
+<br>
+<br>
+
+
+<!--div class="nav-wrapper">
+  <button class="nav-icon" onclick="switchSection(0)">
+    <img src="cp1.webp" alt="Icon 1">
+  </button>
+  <button class="nav-icon" onclick="switchSection(1)">
+    <img src="cp5.png" alt="Icon 2">
+  </button>
+  <button class="nav-icon" onclick="switchSection(2)">
+    <img src="cp7.png" alt="Icon 3">
+  </button>
+</!--div>
+
+
+
+
+<div class="panel active-view">
+  <div class="image-box">
+    <img class="banner-pic" src="b1.jpg" alt="Banner One">
+    <div class="hover-info">
+      <h2></h2>
+      <p>What impressed us most was TeamTeki's ability to seamlessly automate our marketing project workflow, ensuring that testing did not disrupt our operations. Their timely and comprehensive reporting allowed us to address any issues promptly, minimizing potential risks to our data.</p>
+       <h5>Sudhir Vashith, CEO Jaggery Consulting</h5>
+       <br>
+      <button class="pulse-button">View their Story</button>
+    </div>
+  </div>
+</div>
+
+<div class="panel">
+  <div class="image-box">
+    <img class="banner-pic" src="b3.jpg" alt="Banner Two">
+    <div class="hover-info">
+      <h2></h2>
+      <p>We had the pleasure of partnering with TeamTeki for our database testing needs, and the experience was nothing short of outstanding. Their expertise in this domain, attention to detail, and commitment to delivering high-quality results truly sets them apart.</p>
+       <h5>Ashish Sharma, CEO Payvertical</h5>
+       <br>
+      <button class="pulse-button">View their Story</button>
+    </div>
+  </div>
+</div>
+
+<div-- class="panel">
+  <div class="image-box">
+    <img class="banner-pic" src="https://www.mindtickle.com/wp-content/uploads/2025/06/Featured-Image_sales-engagement_825x410px-600x400.jpg" alt="Banner Three">
+    <div class="hover-info">
+      <h2></h2>
+      <p>Writing UI automation is very easy with Co.Meta particularly because of its no-code offerings and a lot of thought given to different possibilities by the makers of the tool. We are generally impressed with the capability this tool offers. Dig deeper and you will always find something more to explore.</p>
+       <h5>Lalit Kumar, QA Engineer & Tea Time Tester</h5>
+       <br>
+      <button class="pulse-button">View their Story</button>
+    </div>
+  </div>
+</div-->
+<br><br>
+
+<h1 class="ui-heading" style="text-align: left; margin-left: 5%;">
+      
+      🌏 News & Insights
+    </h1>
+    <h1 class="section-title" style="text-align: center; font-size: 50px; text-align: left; margin-left: 5%;">Get the latest news +<br> resources</h1>
+ <div class="newsletter-container">
+      <div class="left-section">
+        <img src="Main.png" alt="Newsletter Image" />
+        <h2 style="font-family: 'Montserrat', 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: .04em;
+    color: #4b5563">News Letter</h2><br>
+        <h4 style="font-size: 20px;
+    font-weight: 300;
+    font-family:'Montserrat', 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+    letter-spacing: 0;
+    line-height: 1.2;
+    color: #000;">
+          News Articles Mindtickle Named "AI-based Sales Solution of the Year"
+          in 2025 Artificial Intelligence Breakthrough Awards Program
+        </h4>
+      </div>
+      <div class="right-section">
+        <div class="article-block">
+          <img src="1st.png" alt="Article 1" />
+          <div class="article-content">
+            <h3>Must-Haves for Every Sales Enablement Program</h3>
+            <a href="#" class="read-more">Read more</a>
+          </div>
+        </div>
+        <div class="article-block">
+          <img src="2nd.png" alt="Article 2" />
+          <div class="article-content">
+            <h3>
+              How Can a Sales Enablement and Training Platform Help With Retail
+              Sales?
+            </h3>
+            <a href="#" class="read-more">Read more</a>
+          </div>
+        </div>
+        <div class="article-block">
+          <img src="3rd.png" alt="Article 3" />
+          <div class="article-content">
+            <h3>The Metrics for Measuring Your Sales Enablement Program</h3>
+            <a href="#" class="read-more">Read more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<section class="full-section2">
+    </section>
+<section class="full-section3">
+    </section>
+
+
+ <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column" id="column1">
+        <img src="logo.png" alt="Company Logo" class="footer-logo">
+        <p>We are a tech-forward company focused on innovation and customer satisfaction. Discover more about us and our mission to deliver excellence.</p>
+      </div>
+      <div class="footer-column">
+        <h3>🤓 New to MINDTICKLE?</h3>
+        <ul>
+          <li><i class=""></i><a href="#"> Why Choose Mindtickle</a></li>
+          <li><i class=""></i><a href="#"> Revenue Enablement Platform</a></li>
+          <li><i class=""></i><a href="#"> Solutions</a></li>
+
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>🙌 WHO WE HELP</h3>
+        <ul>
+          <li><i class=""></i><a href="#"> Sales Enablement</a></li>
+          <li><i class=""></i><a href="#"> Marketing Teams</a></li>
+          <li><i class=""></i><a href="#"> Revenue Leadership</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>🏢 COMPANY</h3>
+        <ul>
+          <li><i class=""></i><a href="#"> About Mindtickle</a></li>
+          <li><i class=""></i><a href="#">Careers</a></li>
+          <li><i class=""></i><a href="#"> News</a></li>
+        </ul>
+      </div>
+    </div>
+  
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>

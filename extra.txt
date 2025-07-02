@@ -1,0 +1,119 @@
+-----counter box css and js------
+.stats-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -30px;
+}
+
+.gradient-border {
+  background: linear-gradient(135deg, #FFA726, #FF7043, #FF5722);
+  padding: 1px; /* border thickness */
+ 
+  max-width: 1100px;
+  width: 100%;
+}
+
+.stat-box {
+  display: flex;
+  background: white;
+  height: 130px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+}
+
+.stat-item {
+  flex: 1;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.stat-number {
+color: #222222;
+    font-family: "Montserrat", Sans-serif;
+    font-size: 54px;
+    font-weight: 300;
+  transition: all 0.4s ease;
+}
+
+.stat-title {
+     font-family: "Work Sans", Sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0px;
+    color: #57514B;
+}
+
+.separator {
+  width: .5px;
+  background-color: #000;
+  height: 65px;
+  margin-top: 22px;
+}
+
+@media (max-width: 768px) {
+  .stat-box {
+    flex-direction: column;
+  }
+
+  .separator {
+    width: 100%;
+    height: 1px;
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const counters = document.querySelectorAll('.counter');
+  const duration = 2000;
+
+  counters.forEach(counter => {
+    const target = +counter.getAttribute('data-target');
+    const showPercent = counter.getAttribute('data-percent') === "true";
+    let current = 0;
+    const increment = target / (duration / 16);
+
+    const updateCount = () => {
+      if (current < target) {
+        current += increment;
+        const displayValue = Math.ceil(current).toLocaleString();
+        counter.innerText = showPercent ? `${displayValue}%` : displayValue;
+        requestAnimationFrame(updateCount);
+      } else {
+        const finalValue = target.toLocaleString();
+        counter.innerText = showPercent ? `${finalValue}%` : finalValue;
+      }
+    };
+
+    updateCount();
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".stat-number");
+
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute("data-value");
+      const count = +counter.innerText.replace('%', '');
+
+      const speed = 20; // lower is faster
+      const increment = Math.ceil(target / 50);
+
+      if (count < target) {
+        counter.innerText = `${count + increment > target ? target : count + increment}%`;
+        setTimeout(updateCount, speed);
+      } else {
+        counter.innerText = `${target}%`;
+      }
+    };
+
+    updateCount();
+  });
+});
+
+
+-------------End--------------------
