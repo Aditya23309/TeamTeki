@@ -36,7 +36,14 @@ const panel = document.getElementById('floatingPanel');
       rightPara: "💥 USE CASES",
       
       submenu: ['Copilot', 'Role-Plays', 'Sales Training','Coaching','Sales Content Management','Digital Sales Rooms','Conversation Intelligence'],
-      details: ['NEW! AI Role-PlaysNail every pitch with an AI-selling simulator', 'AI Sales Coaching Develop reps with proven top-performer skills', 'Buyer Engagement Close deals faster with tailored buying experiences', 'Personalized Sales Training Turn potential into performance','Sales Kick-offs Reinforce learning with impactful sessions','Partner Enablement Align messaging across revenue-generating channels']
+   details: [
+  'AI Role-Plays: Nail every pitch with an AI-selling simulator',
+  'Sales Coaching: Develop reps with proven top-performer skills',
+  'Buyer Engagement: Close deals faster with tailored buying experiences',
+  'Training: Turn potential into performance',
+  'Kick-offs: Reinforce learning with impactful sessions',
+  'Enablement: Align messaging across revenue channels'
+]
     },
     menu2: {
       leftPara1: "Solutions overview 👉",
@@ -86,18 +93,17 @@ const panel = document.getElementById('floatingPanel');
 
   };
 
-  function openPanel(menuKey) {
-    const data = menuData[menuKey];
+ function openPanel(menuKey) {
+  const data = menuData[menuKey];
 
-    // Update paragraph content
-    leftPara1.innerHTML = `<strong>${data.leftPara1}</strong>`;
-    leftPara2.textContent = data.leftPara2;
-    leftPara3.textContent = data.leftPara3;
-    rightPara.innerHTML = `<strong>${data.rightPara}</strong>`;
-    document.getElementById('rightImage').src = data.image;
-    
+  // Update left panel content
+  leftPara1.innerHTML = `<strong>${data.leftPara1}</strong>`;
+  leftPara2.textContent = data.leftPara2;
+  leftPara3.textContent = data.leftPara3;
+  rightPara.innerHTML = `<strong>${data.rightPara}</strong>`;
 
-const rightImage = document.getElementById('rightImage');
+  // Update right panel image
+  const rightImage = document.getElementById('rightImage');
   if (data.image) {
     rightImage.src = data.image;
     rightImage.style.display = 'block';
@@ -105,25 +111,58 @@ const rightImage = document.getElementById('rightImage');
     rightImage.style.display = 'none';
   }
 
-    // Update submenu
-    submenu.innerHTML = '';
-    data.submenu.forEach(item => {
-      const link = document.createElement('a');
-      link.href = '#';
-      link.textContent = item;
-      submenu.appendChild(link);
+  // Update submenu
+  submenu.innerHTML = '';
+  data.submenu.forEach(item => {
+    const link = document.createElement('a');
+    link.href = '#';
+    link.textContent = item;
+    submenu.appendChild(link);
+  });
+
+  // Clear previous content
+  detailsList.innerHTML = '';
+
+  if (menuKey === 'menu1') {
+    // Grid layout for menu1
+    detailsList.className = 'details-grid';
+
+    data.details.slice(0, 6).forEach(detail => {
+      const [title, ...descParts] = detail.split(':');
+      const description = descParts.join(':').trim();
+
+      const item = document.createElement('div');
+      item.className = 'grid-item';
+
+      const heading = document.createElement('h4');
+      heading.textContent = title.trim();
+
+      const para = document.createElement('p');
+      para.textContent = description;
+
+      item.appendChild(heading);
+      item.appendChild(para);
+      detailsList.appendChild(item);
     });
 
-    // Update details list
-    detailsList.innerHTML = '';
+  } else {
+    // Regular list layout for others
+    detailsList.className = '';
+    const ul = document.createElement('ul');
+
     data.details.forEach(detail => {
       const li = document.createElement('li');
       li.textContent = detail;
-      detailsList.appendChild(li);
+      ul.appendChild(li);
     });
 
-    panel.classList.add('show');
+    detailsList.appendChild(ul);
   }
+
+  // Show floating panel
+  panel.classList.add('show');
+}
+
 
   // Close on outside click
   document.addEventListener('click', (e) => {
@@ -146,18 +185,32 @@ const rightImage = document.getElementById('rightImage');
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.slider-track');
+  const slides = document.querySelectorAll('.slide');
+  const prevButton = document.querySelector('.arrow-left');
+  const nextButton = document.querySelector('.arrow-right');
+  let index = 0;
 
- const track = document.querySelector('.slider-track');
-    const slides = document.querySelectorAll('.slide');
-    let index = 0;
+  function showSlide(i) {
+    index = (i + slides.length) % slides.length;
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
 
-    function nextSlide() {
-      index = (index + 1) % slides.length;
-      track.style.transform = `translateX(-${index * 100}%)`;
-    }
+  // Auto-slide
+  const autoSlide = setInterval(() => {
+    showSlide(index + 1);
+  }, 4000);
 
-    setInterval(nextSlide, 4000);
+  // Manual controls
+  prevButton.addEventListener('click', () => {
+    showSlide(index - 1);
+  });
 
+  nextButton.addEventListener('click', () => {
+    showSlide(index + 1);
+  });
+});
 
 
 
