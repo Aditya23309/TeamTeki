@@ -12,6 +12,7 @@
   background-color: #fff;
    
 }
+
 header {
  background-color: rgba(0, 0, 0, 0);
   display: flex;
@@ -101,7 +102,7 @@ header {
       transform: translateX(-50%);
       width: 100%;
       max-width: 1400px;
-      height: 79%;
+      height: 71%!important;
       background-color: #fff;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
       display: none;
@@ -166,19 +167,56 @@ header {
   margin-bottom: 10px;
   display: block;
 }
-#detailsList{
-     font-size: 12px;
-    color: #15191f;
-    font-weight: 500;
-    display: block;
-    font-family: "Montserrat", "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-    line-height: 34px;
 
+
+#detailsList.details-grid {
+  display: grid !important;
 }
-    ul {
-      list-style: disc inside;
-      margin-top: 10px;
-    }
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 25px 30px;
+  margin-top: 20px;
+}
+
+.grid-item h4 {
+  margin: 0 0 5px;
+  font-size: 14px;
+  color: #15191f;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
+
+.grid-item p {
+  margin: 0;
+  font-size: 13px;
+  color: #4B5563;
+  font-family: "Work Sans", sans-serif;
+  line-height: 1.4;
+}
+
+#detailsList ul {
+  list-style: disc inside;
+  margin-top: 10px;
+  padding-left: 0;
+}
+
+#detailsList ul li {
+  font-size: 12px;
+  color: #15191f;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+}
+
+
+
+
+   
+  
+
 
   
 
@@ -1343,6 +1381,40 @@ font-size: 16px;
       color: #222;
     }
 
+
+
+.arrow {
+  position: absolute;
+  bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 2;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+  border-radius: 0; /* square shape */
+  width: 60px;
+  height: 60px;
+}
+
+/* On hover */
+.arrow:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* Right and left arrows at bottom right with 10px gap between them */
+.arrow-right {
+  right: 10px;
+}
+
+.arrow-left {
+  right: 140px; /* 40px width + 10px gap + 10px spacing */
+}
+
+
+
     /* Responsive Styles 
     @media (max-width: 768px) {
       .slide {
@@ -2334,7 +2406,7 @@ font-size: 16px;
 
 @media (min-width: 1280px) and (max-width: 1920px) and (min-height: 800px) and (max-height: 1200px) {
   .slider-container {
-    height: 65vh;
+    height: 75vh;
     padding-top: 40px;
   }
 
@@ -2358,6 +2430,10 @@ font-size: 16px;
     font-size: 1.6rem;
     line-height: 1.6;
     max-width: 800px;
+  }
+
+  .arrow{
+    height: 80px;
   }
 }
 
