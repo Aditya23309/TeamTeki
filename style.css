@@ -2290,7 +2290,7 @@ font-size: 16px;
 @media (min-width: 1280px) and (max-width: 1920px) and (min-height: 800px) and (max-height: 1200px) {
 
   .containerr {
-    max-width: 1800px; /* Allow container to expand more */
+    max-width: 2000px; /* Allow container to expand more */
     padding: 0 40px; /* More space on the sides */
     margin-top: -2%;
   }
