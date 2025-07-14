@@ -16,51 +16,63 @@
  <link rel="stylesheet" href="style.css">
  
 <body>
-    <header>
+ <header>
   <div class="nav-left">
-   <a href="index.html"><img src="logo.png"  alt="Home" /></a>
+    <a href="index.html"><img src="logo.png" alt="Home" /></a>
   </div>
 
   <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-  <span class="icon">☰</span>
-</button>
+    <span class="icon">☰</span>
+  </button>
 
   <nav class="nav-center">
-    <a onclick="openPanel('menu1')">Platform</a>
-    <a onclick="openPanel('menu2')">Solution</a>
-    <a onclick="openPanel('menu3')">Services</a>
-    <a onclick="openPanel('menu4')">Customers</a>
-    <a onclick="openPanel('menu5')">Resources</a>
-    <a onclick="openPanel('menu6')">Company</a>
+    <div class="nav-item">
+      <a href="platform.html" data-menu="menu1">Platform</a>
+      <button class="dropdown-arrow" data-menu="menu1">▼</button>
+    </div>
+    <div class="nav-item">
+      <a href="solution.html" data-menu="menu2">Solution</a>
+      <button class="dropdown-arrow" data-menu="menu2">▼</button>
+    </div>
+    <div class="nav-item">
+      <a href="services.html" data-menu="menu3">Services</a>
+      <button class="dropdown-arrow" data-menu="menu3">▼</button>
+    </div>
+    <div class="nav-item">
+      <a href="customers.html" data-menu="menu4">Customers</a>
+      <button class="dropdown-arrow" data-menu="menu4">▼</button>
+    </div>
+    <div class="nav-item">
+      <a href="resources.html" data-menu="menu5">Resources</a>
+      <button class="dropdown-arrow" data-menu="menu5">▼</button>
+    </div>
+    <div class="nav-item">
+      <a href="company.html" data-menu="menu6">Company</a>
+      <button class="dropdown-arrow" data-menu="menu6">▼</button>
+    </div>
   </nav>
 
   <div class="nav-right">
-      <i class="fas fa-search search-icon"></i>
-      <button class="bounce-button">Login</button>
-    </div>
-  
+    <i class="fas fa-search search-icon"></i>
+    <button class="bounce-button">Login</button>
+  </div>
 </header>
 
 <div class="floating-window" id="floatingPanel">
-    <button class="close-floating-mobile" id="closeFloatingMobile" aria-label="Close panel">✕</button>
+  <button class="close-floating-mobile" id="closeFloatingMobile" aria-label="Close panel">✕</button>
   <div class="left-panel">
     <p id="leftPara1"><strong>Default Left Para 1</strong></p>
-    <p id="leftPara2">Default Left Para 2</p><br>
-     <p id="leftPara3">Default Left Para 3</p>
-    <div class="submenu" id="submenu">
-      <!-- Submenu links -->
-    </div>
-  </div>
-  
-  <div class="right-panel">
-    <img id="rightImage" src="https://via.placeholder.com/100x40?text=Img" alt="Panel Image" class="right-image"/>
-    <p id="rightPara"><strong>Default Right Para</strong></p>
-    <div id="detailsList">
-      <!-- List items -->
-  </div>
+    <p id="leftPara2">Default Left Para 2</p>
+    <p id="leftPara3">Default Left Para 3</p>
+    <div class="submenu" id="submenu"></div>
   </div>
 
+  <div class="right-panel">
+    <img id="rightImage" src="https://via.placeholder.com/100x40?text=Img" alt="Panel Image" class="right-image" />
+    <p id="rightPara"><strong>Default Right Para</strong></p>
+    <div id="detailsList"></div>
   </div>
+</div>
 
 <div class="containerr">
  <section class="sectionn">
@@ -223,7 +235,7 @@
   <div class="box">
     <div class="image-layer" style="background-image: url('Travel&Logistics.png');"></div>
     <div class="content">
-      <div class="small-headingg">Research Report</div>
+      <div class="small-headingg">Travel&Logistics</div>
       <div class="bi-headingg">Resilience redefined: From readiness to reinvention</div>
       <div class="hover-content">
         <p>This is a hover description for card one. It appears under the heading.</p>
@@ -237,7 +249,7 @@
   <div class="box">
     <div class="image-layer" style="background-image: url('Telecom.png');"></div>
     <div class="content">
-      <div class="small-headingg">Research Report</div>
+      <div class="small-headingg">Telecom</div>
       <div class="bi-headingg">Resilience redefined: From readiness to reinvention</div>
       <div class="hover-content">
         <p>This is a hover description for card two.</p>
@@ -250,7 +262,7 @@
   <div class="box">
     <div class="image-layer" style="background-image: url('Retail.png');"></div>
     <div class="content">
-      <div class="small-headingg">Research Report</div>
+      <div class="small-headingg">Retail</div>
       <div class="bi-headingg">Resilience redefined: From readiness to reinvention</div>
       <div class="hover-content">
         <p>This is a hover description for card three.</p>
@@ -264,7 +276,7 @@
   <div class="box">
     <div class="image-layer" style="background-image: url('Automobile.png');"></div>
     <div class="content">
-      <div class="small-headingg">Research Report</div>
+      <div class="small-headingg">Automobile</div>
       <div class="bi-headingg">Resilience redefined: From readiness to reinvention</div>
       <div class="hover-content">
         <p>This is a hover description for card four.</p>
@@ -277,7 +289,7 @@
   <div class="box">
     <div class="image-layer" style="background-image: url('Banking.png');"></div>
     <div class="content">
-      <div class="small-headingg">Research Report</div>
+      <div class="small-headingg">Banking</div>
       <div class="bi-headingg">Resilience redefined: From readiness to reinvention</div>
       <div class="hover-content">
         <p>This is a hover description for card five.</p>
@@ -290,7 +302,7 @@
   <div class="box">
     <div class="image-layer" style="background-image: url('Energy\,\ Resources\ &\ Utilities.png');"></div>
     <div class="content">
-      <div class="small-headingg">Research Report</div>
+      <div class="small-headingg">Resources & Utilities</div>
       <div class="bi-headingg">Resilience redefined: From readiness to reinvention</div>
       <div class="hover-content">
         <p>This is a hover description for card six.</p>
@@ -304,7 +316,7 @@
   <div class="box">
     <div class="image-layer" style="background-image: url('Healthcare.png');"></div>
     <div class="content">
-      <div class="small-headingg">Research Report</div>
+      <div class="small-headingg">Healthcare</div>
       <div class="bi-headingg">Resilience redefined: From readiness to reinvention</div>
       <div class="hover-content">
         <p>This is a hover description for card seven.</p>
@@ -317,7 +329,7 @@
   <div class="box">
     <div class="image-layer" style="background-image: url('Manufacturing.png');"></div>
     <div class="content">
-      <div class="small-headingg">Research Report</div>
+      <div class="small-headingg">Manufacturing</div>
       <div class="bi-headingg">Resilience redefined: From readiness to reinvention</div>
       <div class="hover-content">
         <p>This is a hover description for card eight.</p>
@@ -477,7 +489,7 @@
         </div>
       </div>
 
-        
+
     </div>
     <button class="arrow arrow-right">&#10095;</button>
   </div>
