@@ -1,18 +1,14 @@
 // your code goes here
 const hamburgerBtn = document.getElementById('hamburger');
-  const navMenu = document.querySelector('.nav-center');
-  const icon = hamburgerBtn.querySelector('.icon');
+const navMenu = document.querySelector('.nav-center');
+const icon = hamburgerBtn.querySelector('.icon');
 
-  hamburgerBtn.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-
-    const isExpanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
-    hamburgerBtn.setAttribute('aria-expanded', !isExpanded);
-
-    // Toggle icon between ☰ and ✕
-    icon.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
-  });
-
+hamburgerBtn.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+  const isExpanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
+  hamburgerBtn.setAttribute('aria-expanded', !isExpanded);
+  icon.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+});
 
 
 
@@ -20,15 +16,15 @@ const hamburgerBtn = document.getElementById('hamburger');
 
 
 const panel = document.getElementById('floatingPanel');
-  const submenu = document.getElementById('submenu');
-  const detailsList = document.getElementById('detailsList');
-  const leftPara1 = document.getElementById('leftPara1');
-  const leftPara2 = document.getElementById('leftPara2');
-  const leftPara3 = document.getElementById('leftPara3');
-  const rightPara = document.getElementById('rightPara');
-  
+const submenu = document.getElementById('submenu');
+const detailsList = document.getElementById('detailsList');
+const leftPara1 = document.getElementById('leftPara1');
+const leftPara2 = document.getElementById('leftPara2');
+const leftPara3 = document.getElementById('leftPara3');
+const rightPara = document.getElementById('rightPara');
+const rightImage = document.getElementById('rightImage');
 
-  const menuData = {
+const menuData = {
     menu1: {
       leftPara1: "Mindtickle’s Revenue Enablement Platform 👉",
       leftPara2: "Explore the leading AI-powered revenue enablement platform built to ramp reps faster, engage the modern buyer, and close more deals.",
@@ -92,18 +88,15 @@ const panel = document.getElementById('floatingPanel');
     }
 
   };
-
- function openPanel(menuKey) {
+function openPanel(menuKey) {
   const data = menuData[menuKey];
+  if (!data) return;
 
-  // Update left panel content
   leftPara1.innerHTML = `<strong>${data.leftPara1}</strong>`;
   leftPara2.textContent = data.leftPara2;
   leftPara3.textContent = data.leftPara3;
   rightPara.innerHTML = `<strong>${data.rightPara}</strong>`;
 
-  // Update right panel image
-  const rightImage = document.getElementById('rightImage');
   if (data.image) {
     rightImage.src = data.image;
     rightImage.style.display = 'block';
@@ -111,7 +104,6 @@ const panel = document.getElementById('floatingPanel');
     rightImage.style.display = 'none';
   }
 
-  // Update submenu
   submenu.innerHTML = '';
   data.submenu.forEach(item => {
     const link = document.createElement('a');
@@ -120,68 +112,68 @@ const panel = document.getElementById('floatingPanel');
     submenu.appendChild(link);
   });
 
-  // Clear previous content
   detailsList.innerHTML = '';
-
   if (menuKey === 'menu1') {
-    // Grid layout for menu1
     detailsList.className = 'details-grid';
-
-    data.details.slice(0, 6).forEach(detail => {
-      const [title, ...descParts] = detail.split(':');
-      const description = descParts.join(':').trim();
-
-      const item = document.createElement('div');
-      item.className = 'grid-item';
-
-      const heading = document.createElement('h4');
-      heading.textContent = title.trim();
-
-      const para = document.createElement('p');
-      para.textContent = description;
-
-      item.appendChild(heading);
-      item.appendChild(para);
-      detailsList.appendChild(item);
+    data.details.forEach(detail => {
+      const [title, ...desc] = detail.split(':');
+      const div = document.createElement('div');
+      div.className = 'grid-item';
+      div.innerHTML = `<h4>${title}</h4><p>${desc.join(':')}</p>`;
+      detailsList.appendChild(div);
     });
-
   } else {
-    // Regular list layout for others
     detailsList.className = '';
     const ul = document.createElement('ul');
-
-    data.details.forEach(detail => {
+    data.details.forEach(d => {
       const li = document.createElement('li');
-      li.textContent = detail;
+      li.textContent = d;
       ul.appendChild(li);
     });
-
     detailsList.appendChild(ul);
   }
 
-  // Show floating panel
   panel.classList.add('show');
 }
 
+// Nav link hover opens panel (desktop)
+document.querySelectorAll('.nav-item a').forEach(link => {
+  const menuKey = link.dataset.menu;
 
-  // Close on outside click
-  document.addEventListener('click', (e) => {
-    const isInside = panel.contains(e.target) || e.target.closest('nav') || e.target.closest('header');
-    if (!isInside) {
-      panel.classList.remove('show');
+  link.addEventListener('mouseenter', () => {
+    if (window.innerWidth > 767) {
+      openPanel(menuKey);
     }
   });
 
-   const closeFloatingMobileBtn = document.getElementById('closeFloatingMobile');
-  const floatingPanel = document.getElementById('floatingPanel');
-
-  closeFloatingMobileBtn.addEventListener('click', () => {
-    // Only close if screen is small
-    if (window.innerWidth <= 767) {
-      floatingPanel.classList.remove('show');
-    }
+  link.addEventListener('click', (e) => {
+    e.stopPropagation(); // Let the page navigate naturally
   });
+});
 
+// Dropdown button click opens panel (mobile or desktop)
+document.querySelectorAll('.dropdown-arrow').forEach(button => {
+  button.addEventListener('click', e => {
+    e.preventDefault();
+    e.stopPropagation();
+    const menuKey = e.currentTarget.dataset.menu;
+    openPanel(menuKey);
+  });
+});
+
+// Close on outside click (desktop)
+document.addEventListener('click', (e) => {
+  const isInside = panel.contains(e.target) || e.target.closest('nav');
+  if (!isInside && window.innerWidth > 767) {
+    panel.classList.remove('show');
+  }
+});
+
+document.getElementById('closeFloatingMobile').addEventListener('click', () => {
+  if (window.innerWidth <= 767) {
+    panel.classList.remove('show');
+  }
+});
 
 
 
