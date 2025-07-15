@@ -253,9 +253,9 @@ header {
 }
 
 .containerr {
-  width: 100vw; /* Viewport width */
-  max-width: 100vw; /* Prevents any restriction */
-  margin: 0;
+  max-width: 1800px; /* Adjust as needed */
+  margin: 0 auto;
+  width: 100%;
   padding: 0 20px;
   box-sizing: border-box;
 }
