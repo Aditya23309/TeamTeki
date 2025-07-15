@@ -245,11 +245,10 @@ header {
   justify-content: space-between;
   background: #fff;
   min-height: 95vh;
-  margin: 0; /* Remove margin that causes shifting */
-  width: 100vw; /* Full width of the viewport */
+  margin-left: 60px;
+  width:100%;
   box-sizing: border-box;
-  padding: 0; /* Optional, adjust as needed */
-  overflow-x: hidden; /* Prevent horizontal scroll if children overflow */
+  
 }
 
 .containerr {
