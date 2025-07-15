@@ -2384,9 +2384,10 @@ font-size: 16px;
 
 /* Left-side content */
 .left-content {
-  max-width: 1000px;
+  max-width: 900px;
   padding-right: 80px;
   margin-top: -1%;
+      margin-left:5%
 }
 
 /* Button styling */
