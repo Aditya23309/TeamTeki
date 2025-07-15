@@ -2359,20 +2359,7 @@ font-size: 16px;
 
 @media (min-width: 1680px) and (max-width: 1920px) and (min-height: 1050px) and (max-height: 1200px) {
 
-.sectionn {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  background: #fff;
-  min-height: 95vh;
-  margin: 0; /* Remove margin that causes shifting */
-  width: 100vw; /* Full width of the viewport */
-  box-sizing: border-box;
-  padding: 0; /* Optional, adjust as needed */
-  overflow-x: hidden; /* Prevent horizontal scroll if children overflow */
-}
-      
+   
 .containerr {
   width: 100vw; /* Full width of the viewport */
   margin: 0;
