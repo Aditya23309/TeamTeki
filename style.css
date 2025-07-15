@@ -2505,13 +2505,13 @@ font-size: 16px;
 
 
 @media (min-width: 1280px) and (max-width: 1920px) and (min-height: 800px) and (max-height: 1200px) {
-  .slider-container {
-    height: 50vh;
+ .slider-container {
+    height: 60vh;
     padding-top: 40px;
   }
 
   .slide {
-    padding: 40px 60px;
+    padding: 40px 10px;
     margin-top: -6%;
   }
 
