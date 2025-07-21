@@ -2497,9 +2497,7 @@ font-size: 16px;
     padding: 16px 38px;
   }
 
-  .image-layer {
-    filter: brightness(1.2); /* Slightly brighter on large screens */
-  }
+
 }
 
 
