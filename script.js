@@ -26,7 +26,7 @@ const rightImage = document.getElementById('rightImage');
 
 const menuData = {
     menu1: {
-      leftPara1: "Mindtickle’s Revenue Enablement Platform 👉",
+      leftPara1: "TeamTeki Revenue Enablement Platform 👉",
       leftPara2: "Explore the leading AI-powered revenue enablement platform built to ramp reps faster, engage the modern buyer, and close more deals.",
       leftPara3: "💎️ Products",
       rightPara: "💥 USE CASES",
@@ -57,20 +57,20 @@ const menuData = {
        image: "https://www.mindtickle.com/wp-content/uploads/2025/02/Cisco-logo.png",
       rightPara: "Services Reviews",
       submenu: ['Get Started Quickly', 'Achieve Ongoing Success', 'Scale With Our Experts'],
-      details: ['Learn How the Cisco Leverages Mindtickle to the Scale Coaching Efforts ...? We leveraged Mindtickle to roll out training to 18,000 of our sellers in six weeks... We also had an extremely high adoption rate for the training, and we really owe a lot of it to the Mindtickle platform and working with Mindtickle’s Professional Services.','View Their Story 👉']
+      details: ['Learn How the Cisco Leverages TeamTeki to the Scale Coaching Efforts ...? We leveraged TeamTeki to roll out training to 18,000 of our sellers in six weeks... We also had an extremely high adoption rate for the training, and we really owe a lot of it to the TeamTeki platform and working with TeamTeki Professional Services.','View Their Story 👉']
     },
      menu4: {
       leftPara1: "Customer Stories 👉",
-      leftPara2: "See how GTM teams use Mindtickle to drive revenue growth.",
+      leftPara2: "See how GTM teams use TeamTeki to drive revenue growth.",
       leftPara3: "Customer Video Testimonials 💥 ",
-      rightPara: "Janssen India Cuts Rep Ramp Time in Half With Mindtickle",
+      rightPara: "Janssen India Cuts Rep Ramp Time in Half With TeamTeki",
         image: "https://www.mindtickle.com/wp-content/uploads/2025/02/Janssen_Pharmaceuticals_logo-logo.png",
       submenu: ['Juniper Networks', 'Cisco', 'Integrace Health','Janssen India','MetricStream','Signifyd'],
-      details: ['Our vision was to have all learning happen in one portal. With Mindtickle, sales reps can easily go in, find what they need to learn, and go out and do their work. And we have visibility into how they’re engaging with the platform. It’s a one-stop shop for everyone.']
+      details: ['Our vision was to have all learning happen in one portal. With TeamTeki, sales reps can easily go in, find what they need to learn, and go out and do their work. And we have visibility into how they’re engaging with the platform. It’s a one-stop shop for everyone.']
     },
     menu5: {
       leftPara1: "Resource Library 👉",
-      leftPara2: "Check out Mindtickle’s resource library for helpful tips, guides, and strategies to level up your sales game",
+      leftPara2: "Check out TeamTeki resource library for helpful tips, guides, and strategies to level up your sales game",
        leftPara3: "🍎 Learn & Explore",
       image: "https://www.mindtickle.com/wp-content/uploads/2025/03/image.png",
       rightPara: "🌟 Featured Resource",
@@ -78,13 +78,13 @@ const menuData = {
       details: ['See whats top of mind for 600+ sales managers ']
     },
     menu6: {
-      leftPara1: "About Mindtickle👉",
+      leftPara1: "About TeamTeki👉",
       leftPara2: "Learn about the people behind the platform.",
        leftPara3: "",
        image: "https://teamteki.com/wp-content/uploads/2023/09/Logo-Team-Teki-Small.png",
       rightPara: "🌟 Careers",
-      submenu: ['Why Mindtickle', 'News', 'Career'],
-      details: ['See what opportunities are open at Mindtickle and Join the team']
+      submenu: ['Why TeamTeki', 'News', 'Career'],
+      details: ['See what opportunities are open at TeamTeki and Join the team']
     }
 
   };
@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Auto-slide
   const autoSlide = setInterval(() => {
     showSlide(index + 1);
-  }, 4000);
+  }, 5000);
 
   // Manual controls
   prevButton.addEventListener('click', () => {
@@ -343,3 +343,11 @@ logos.forEach((logo, index) => {
 // Initialize slider
 changeImages(0);
 startAutoSlide();
+
+
+
+
+
+
+
+
