@@ -2516,7 +2516,7 @@ font-size: 16px;
   }
 
   .slide {
-    padding: 20px 1px!important;
+    padding: 1px!important;
     margin-top: -9%;
   }
 
@@ -2527,7 +2527,7 @@ font-size: 16px;
     border-radius: 12px;
   }
       .slide-content{
-            margin-left:-20%!important;
+            margin-left:-10%!important;
       }
 
   .slide-content h3 {
@@ -2538,7 +2538,7 @@ font-size: 16px;
   .slide-content p {
     font-size: 1.8rem;
     line-height: 1.6;
-    max-width: 650px;
+    max-width: 700px;
   }
 
   .arrow{
