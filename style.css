@@ -1345,7 +1345,7 @@ font-size: 16px;
       background-color: #C9DBCB;
       overflow: hidden;
       position: relative;
-      height: 65vh;
+      height: 70vh;
       display: flex;
   justify-content: center;   /* centers horizontally */
   align-items: center;
@@ -1362,7 +1362,7 @@ font-size: 16px;
       display: flex;
       flex: 0 0 100%;
       align-items: center;
-      padding: 20px;
+      padding: 1px;
     }
 
     .slide-image {
@@ -1371,14 +1371,15 @@ font-size: 16px;
     }
 
     .slide-image img {
-      width: 90vw;
-      height: 50vh;
-      max-width: 580px;
+      width: 80vw;
+      height: 52vh;
+      max-width: 520px;
       border-radius: 10px;
     }
 
     .slide-content {
       flex: 1;
+      margin-bottom: -3%;
     }
 
     .slide-content h3 {
@@ -1411,15 +1412,15 @@ font-size: 16px;
   bottom: 20px;
  background-color: #C9DBCB;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   cursor: pointer;
   padding: 10px;
   z-index: 2;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s;
   border-radius: 0; /* square shape */
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
 }
 
 /* On hover */
@@ -1429,11 +1430,17 @@ font-size: 16px;
 
 /* Right and left arrows at bottom right with 10px gap between them */
 .arrow-right {
-  right: 10px;
+  right: 33px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
 }
 
 .arrow-left {
-  right: 140px; /* 40px width + 10px gap + 10px spacing */
+  right: 120px; 
+  display: flex;
+   justify-items: center;
+  align-items: center;/* 40px width + 10px gap + 10px spacing */
 }
 
 
@@ -1490,7 +1497,7 @@ font-size: 16px;
       width: 100%;
       background-size: cover;
       background-position: center;
-  
+       
   transition: opacity 0.4s ease, filter 0.6s ease;
       z-index: 1;
     }
@@ -2378,7 +2385,7 @@ font-size: 16px;
 
   .headline-section h1 {
     font-size: 28px;
-    margin-left: 6.5%;
+    margin-left: 4%;
   }
 
   .headline-section a {
@@ -2411,19 +2418,19 @@ font-size: 16px;
 
   .small-heading {
     font-size: 20px;
-    margin-left: 5%;
+    margin-left: 2%;
   }
 
   .big-heading {
     font-size: 48px;
     line-height: 1.3em;
-    margin-left: 5%;
+    margin-left: 2%;
   }
 
   .description {
     font-size: 22px;
     max-width: 800px;
-    margin-left: 5%;
+    margin-left: 2%;
   }
 
   .icon-row {
@@ -2497,53 +2504,58 @@ font-size: 16px;
     padding: 16px 38px;
   }
 
-
+ 
 }
 
 
 
 @media (min-width: 1280px) and (max-width: 1920px) and (min-height: 800px) and (max-height: 1200px) {
- .slider-container {
-    height: 60vh;
+  .slider-container {
+    height: 63vh;
     padding-top: 40px;
   }
 
   .slide {
-    padding: 20px 10px;
-    margin-top: -4%;
+    padding: 50px 1px!important;
+    margin-top: -6%;
   }
 
   .slide-image img {
-    max-width: 900px;
+    max-width: 850px;
     width: 100%;
-    height: auto;
+    height: 51vh;
     border-radius: 12px;
   }
 
   .slide-content h3 {
-    font-size: 2.5em;
+    font-size: 2.7em;
     line-height: 1.4;
   }
 
   .slide-content p {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     line-height: 1.6;
     max-width: 800px;
   }
 
   .arrow{
-    height: 100px;
-    width: 80px;
+    height: 68px;
+    width: 70px;
   }
 
   .arrow-right {
-  right: 10px;
-  font-size: 2.2em!important;
+  right: 20px;
+  font-size: 2.6em!important;
 }
 
 .arrow-left {
   right: 200px; 
-   font-size: 2.2em!important;/* 40px width + 10px gap + 10px spacing */
+   font-size: 2.6em!important;/* 40px width + 10px gap + 10px spacing */
+}
+.slid-button{
+  font-weight: 500;
+  margin-left: 8%;
+  font-size: 1.5rem!important;
 }
 }
 
