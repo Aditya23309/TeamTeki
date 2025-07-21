@@ -2527,7 +2527,7 @@ font-size: 16px;
     border-radius: 12px;
   }
       .slide-content{
-            margin-left:-10%;
+            margin-left:-20%!important;
       }
 
   .slide-content h3 {
