@@ -88,12 +88,12 @@ header {
   cursor: pointer;
 }
 
-.bounce-button {
+.transition-button {
   background-color: #5600F1;
   font-family: "Work Sans", Sans-serif;
   font-weight: 400;
   line-height: 1.05;
-  transition-duration: 300s;
+  
   border-radius: 52px;
   padding: 12px 25px;
   color: white;
@@ -560,6 +560,62 @@ header {
       0% { opacity: 1; transform: scale(1); }
       100% { opacity: 0.7; transform: scale(1.05); }
     }
+
+@media screen and (min-width: 1440px) and (max-width: 1920px) and 
+       (min-resolution: 96dpi) and (max-resolution: 120dpi),
+       screen and (min-width: 1440px) and (max-width: 1920px) and 
+       (-webkit-min-device-pixel-ratio: 1) and (-webkit-max-device-pixel-ratio: 1.25)  {
+  
+  /* All styles inside here apply only to normal-density screens at 100% scaling (approx.) */
+  
+  .sectionn {
+    margin-left: 120px; /* adjust layout for larger screens */
+  }
+
+  .big-headingg {
+    font-size: 66px;
+    margin-top: -5%;
+  }
+
+  .right-content img {
+    height: 80vh;
+    margin-top: 8%;
+    margin-right: -12%;
+  }
+
+  .paragraph {
+    font-size: 24px;
+  }
+.headline-section h1{
+  margin-left: 6%;
+}
+.section-content{
+  margin-left: 3%;
+}
+  .icon-box img {
+    width: 75px;
+    height: 65px;
+  }
+
+  .center-button button {
+    font-size: 20px;
+    padding: 18px 45px;
+  }
+
+  /* Add any other overrides you want specifically for 100% scale screens */
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .section-title {
   font-family: "Montserrat", Sans-serif;
     font-size: 30px;
@@ -1360,9 +1416,10 @@ font-size: 16px;
 
     .slide {
       display: flex;
-      flex: 0 0 100%;
+      flex: 0 0 98%;
       align-items: center;
       padding: 20px;
+      border-radius: 0px!important;
     }
 
     .slide-image {
@@ -1374,7 +1431,7 @@ font-size: 16px;
       width: 90vw;
       height: 50vh;
       max-width: 580px;
-      border-radius: 10px;
+     
     }
 
     .slide-content {
@@ -1408,10 +1465,10 @@ font-size: 16px;
 
 .arrow {
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;
  background-color: #C9DBCB;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   cursor: pointer;
   padding: 10px;
   z-index: 2;
@@ -1419,14 +1476,13 @@ font-size: 16px;
   transition: background-color 0.3s;
   border-radius: 0; /* square shape */
   width: 60px;
-  height: 60px;
+  height: 50px;
 }
 
 /* On hover */
 .arrow:hover {
   background-color: rgba(255, 255, 255, 1);
 }
-
 /* Right and left arrows at bottom right with 10px gap between them */
 .arrow-right {
   right: 10px;
@@ -1435,6 +1491,56 @@ font-size: 16px;
 .arrow-left {
   right: 140px; /* 40px width + 10px gap + 10px spacing */
 }
+/* Right and left arrows at bottom right with 10px gap between them */
+
+
+
+@media (min-resolution: 96dpi) and (max-resolution: 110dpi) {
+  
+  .slider-container {
+    height: 70vh!important;
+    padding-top: 20px;
+  }
+
+  .slide {
+    flex: 0 0 97%;
+    margin-right: 2%; 
+    padding: 25px;
+  }
+
+  .slide-image img {
+    width: 65vw!important;
+    max-width: 730px!important;
+    height: 55vh!important;
+    border-radius: 0px !important;
+   
+  }
+
+  .slide-content h3 {
+    font-size: 2em;
+  }
+
+  .slide-content p {
+    font-size: 1.3rem;
+  }
+
+  .arrow {
+    width: 65px;
+    height: 65px;
+  
+  }
+
+  .arrow-left {
+    right: 160px!important;
+    
+  }
+
+  .arrow-right {
+    right: 10px!important;
+  }
+}
+
+
 
 
 
@@ -1456,22 +1562,20 @@ font-size: 16px;
 
     .containeer {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
       margin: auto;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
        background-color: #AB6604;
-       padding: 30px;
+       padding: 32px;
        width: 100%;
 
     }
 
     .box {
       position: relative;
-      height: 400px;
+      height: 420px;
       overflow: hidden;
-      border-radius: 10px;
-      
      
       transition: transform 0.3s ease;
       display: flex;
@@ -1575,6 +1679,89 @@ font-size: 16px;
     }
 
 
+
+@media (min-resolution: 96dpi) and (max-resolution: 110dpi){
+
+  .containeer {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* ensure width fits */
+    padding: 40px;
+    gap: 28px;
+    justify-content: center;
+  }
+
+  .box {
+    width: 400px;
+    height: 600px!important;
+    margin: auto; /* optional: centers the box in the grid */
+  }
+
+  .small-headingg {
+    font-size: 0.85rem;
+    margin-left: 2rem;
+    padding-top: 2rem;
+  }
+
+  .bi-headingg {
+    font-size: 1.4rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .hover-content {
+    font-size: 15px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .read-more {
+    font-size: 15px;
+    padding: 10px 16px;
+  }
+}
+
+
+
+@media (min-resolution: 111dpi) and (max-resolution: 134dpi){
+
+  .containeer {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* ensure width fits */
+    padding: 40px;
+    gap: 28px;
+    justify-content: center;
+  }
+
+  .box {
+    width: 330px;
+    height: 520px!important;
+     /* optional: centers the box in the grid */
+    gap: 40px!important;
+  }
+
+  .small-headingg {
+    font-size: 0.85rem;
+    margin-left: 2rem;
+    padding-top: 2rem;
+  }
+
+  .bi-headingg {
+    font-size: 1.4rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .hover-content {
+    font-size: 15px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .read-more {
+    font-size: 15px;
+    padding: 10px 16px;
+  }
+}
+
+       
    /* For screens wider than 1440px 
 @media (min-width: 1440px) {
   .containeer {
@@ -2470,7 +2657,7 @@ font-size: 16px;
   }
 
   .box {
-    height: 540px; /* Taller cards */
+    height: 640px; /* Taller cards */
   }
 
   .small-headingg {
