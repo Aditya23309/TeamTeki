@@ -30,7 +30,7 @@ header {
 .nav-left img {
   width: 90px;
   transform: scale(1.5);
-  margin-left: 30px;
+  margin-left: 160%!important;
 }
 
 .nav-center {
@@ -80,6 +80,7 @@ header {
   display: flex;
   align-items: center;
   gap: 15px;
+  margin-right: 3%;
 }
 
 .search-icon {
@@ -1570,13 +1571,14 @@ font-size: 16px;
        padding: 32px;
        width: 100%;
 
+
     }
 
     .box {
       position: relative;
       height: 420px;
       overflow: hidden;
-     
+    
       transition: transform 0.3s ease;
       display: flex;
       flex-direction: column;
@@ -1691,7 +1693,7 @@ font-size: 16px;
 
   .box {
     width: 400px;
-    height: 600px!important;
+    height: 540px!important;
     margin: auto; /* optional: centers the box in the grid */
   }
 
@@ -1732,7 +1734,7 @@ font-size: 16px;
 
   .box {
     width: 330px;
-    height: 520px!important;
+    height: 470px!important;
      /* optional: centers the box in the grid */
     gap: 40px!important;
   }
@@ -2433,7 +2435,7 @@ font-size: 16px;
   .nav-left img {
     width: 120px;
     transform: scale(1.8);
-    margin-left: 50%!important;
+    margin-left: 110%!important;
     
   }
 
@@ -2445,14 +2447,17 @@ font-size: 16px;
   .bounce-button {
     padding: 14px 32px;
     font-size: 16px;
+     margin-left: -35%;
    
   }
      .search-icon {
   color: black;
   font-size: 1.4rem;
   cursor: pointer;
-  margin-left: -14%;
+  display: none;
+  
 }
+
 
   .floating-window {
     height: 52%!important;
@@ -2650,14 +2655,14 @@ font-size: 16px;
 @media (min-width: 1280px) and (max-width: 1920px) and (min-height: 800px) and (max-height: 1200px) {
   .containeer {
     grid-template-columns: repeat(4, 1fr); /* Show 4 cards per row on large screens */
-    gap: 30px;
+    gap: 40px;
     padding: 60px;
     max-width: 2000px;
     margin: 0 auto;
   }
 
   .box {
-    height: 640px; /* Taller cards */
+    height: 555px; /* Taller cards */
   }
 
   .small-headingg {
