@@ -399,6 +399,29 @@ header {
       }
     }
 
+@media (min-resolution: 111dpi) and (max-resolution: 134dpi){
+  .left-content{
+    margin-left: -4%;
+  }
+
+  .headline-section h1{
+    margin-left: 3%!important;
+  }
+  .nav-left{
+    margin-left: -4%;
+  }
+  .nav-right{
+    margin-right: 5.5%!important;
+  }
+.section-content{
+  margin-left: 2%!important;
+}
+}
+
+
+
+
+
 
     .headline-sectionn {
      background-color: transparent;
@@ -1727,16 +1750,16 @@ font-size: 16px;
 
   .containeer {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* ensure width fits */
-    padding: 40px;
-    gap: 28px;
+    padding: 80px;
+    gap: 26px;
     justify-content: center;
   }
 
   .box {
-    width: 330px;
+    width: 300px;
     height: 470px!important;
      /* optional: centers the box in the grid */
-    gap: 40px!important;
+    
   }
 
   .small-headingg {
@@ -2528,6 +2551,7 @@ font-size: 16px;
   .sectionn {
     margin-left: 90px;
     min-height: 90vh;
+    
   }
 
   .left-content {
@@ -2662,7 +2686,8 @@ font-size: 16px;
   }
 
   .box {
-    height: 555px; /* Taller cards */
+    height: 555px;
+     /* Taller cards */
   }
 
   .small-headingg {
