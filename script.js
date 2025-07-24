@@ -188,6 +188,23 @@ document.getElementById('closeFloatingMobile').addEventListener('click', () => {
   }
 });
 
+// === SCROLL-DIRECTION NAVBAR HIDE/SHOW ===
+let lastScrollY = window.scrollY;
+const header = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+  const currentScrollY = window.scrollY;
+
+  if (currentScrollY > lastScrollY && currentScrollY > 100) {
+    // Scrolling down & past threshold → hide navbar
+    header.classList.add('hide-navbar');
+  } else {
+    // Scrolling up → show navbar
+    header.classList.remove('hide-navbar');
+  }
+
+  lastScrollY = currentScrollY;
+});
 
 
 // your code goes here
