@@ -48,7 +48,14 @@ const menuData = {
      
       rightPara: "🎯 Industries",
       submenu: ['For Sales Enablement', 'For Marketing Teams','For Revenue Leadership','For Sales Managers'],
-      details: ['Automotive', 'Medical Devices','Consumer Goods','Chemical','Technology']
+         details: [
+  'Automotive: Nail every pitch with an AI-selling simulator',
+  'Medical Devices: Develop reps with proven top-performer skills',
+  'Consumer Goods: Close deals faster with tailored buying experiences',
+  'Chemical: Turn potential into performance',
+  'Technology: Reinforce learning with impactful sessions',
+  'Enablement: Align messaging across revenue channels'
+]
     },
     menu3: {
       leftPara1: "Services 👉",
@@ -104,6 +111,7 @@ function openPanel(menuKey) {
     rightImage.style.display = 'none';
   }
 
+
   submenu.innerHTML = '';
   data.submenu.forEach(item => {
     const link = document.createElement('a');
@@ -113,7 +121,7 @@ function openPanel(menuKey) {
   });
 
   detailsList.innerHTML = '';
-  if (menuKey === 'menu1') {
+  if (menuKey === 'menu1' || menuKey === 'menu2') {
     detailsList.className = 'details-grid';
     data.details.forEach(detail => {
       const [title, ...desc] = detail.split(':');
@@ -132,6 +140,11 @@ function openPanel(menuKey) {
     });
     detailsList.appendChild(ul);
   }
+
+
+
+
+
 
   panel.classList.add('show');
 }
@@ -177,32 +190,37 @@ document.getElementById('closeFloatingMobile').addEventListener('click', () => {
 
 
 
+// your code goes here
 document.addEventListener('DOMContentLoaded', () => {
   const track = document.querySelector('.slider-track');
   const slides = document.querySelectorAll('.slide');
-  const prevButton = document.querySelector('.arrow-left');
-  const nextButton = document.querySelector('.arrow-right');
-  let index = 0;
+  const prevBtn = document.querySelector('.arrow-left');
+  const nextBtn = document.querySelector('.arrow-right');
+  let currentIndex = 0;
 
-  function showSlide(i) {
-    index = (i + slides.length) % slides.length;
-    track.style.transform = `translateX(-${index * 100}%)`;
+  function updateSlidePosition() {
+    const slideWidth = slides[0].offsetWidth + parseInt(getComputedStyle(slides[0]).marginRight);
+    track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
   }
 
-  // Auto-slide
-  const autoSlide = setInterval(() => {
-    showSlide(index + 1);
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateSlidePosition();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateSlidePosition();
+  });
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateSlidePosition();
   }, 5000);
 
-  // Manual controls
-  prevButton.addEventListener('click', () => {
-    showSlide(index - 1);
-  });
-
-  nextButton.addEventListener('click', () => {
-    showSlide(index + 1);
-  });
+  updateSlidePosition(); // initialize
 });
+
 
 
 
