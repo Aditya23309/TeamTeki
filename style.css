@@ -1634,8 +1634,8 @@ font-size: 16px;
     height: 52vh;
   }
   .slide-content{
-    margin-top: 14%;
-    margin-left: -4%;
+    margin-top: 12%;
+    margin-left: -4%!important;
   }
 
   .slide-content h3 {
